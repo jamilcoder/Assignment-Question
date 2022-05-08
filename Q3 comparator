@@ -1,0 +1,48 @@
+//code here
+
+import java.util.*;
+class Student
+{
+int rollno;
+String name;
+int age;
+Student(int rollno,String name,int age)
+{
+this.rollno=rollno;
+this.name=name;
+this.age=age;
+}
+}
+class AgeComparator implements Comparator<Student>{
+  public int compare(Student s1,Student s2){
+return Integer.compare(s1.age,s2.age);
+}
+}
+class RollnoComparator implements Comparator<Student>
+{
+public int compare(Student b1,Student b2)
+{
+return Integer.compare(b1.rollno,b2.rollno);
+}
+}
+public class Q3compr
+{
+public static void main(String args[])
+{
+ArrayList<Student> aa=new ArrayList<Student>();
+    aa.add(new Student(2,"Jamil",20));
+    aa.add(new Student(44,"Hero",22));
+    aa.add(new Student(23,"Zero",21));
+
+    System.out.println("Sorting by rollno");
+   Collections.sort(aa,new RollnoComparator());
+  for(Student s1:aa) {
+    System.out.println(s1.rollno+" "+ s1.name +" "+ s1.age );
+}
+      System.out.println("Sorting by age");
+ Collections.sort(aa,new AgeComparator());
+  for(Student s2:aa)
+{
+System.out.println(s2.rollno +" "+ s2.name +" "+ s2.age );
+}}
+}
