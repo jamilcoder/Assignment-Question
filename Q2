@@ -1,0 +1,20 @@
+Write a program to create a list of string object and sort in alphabetical order.
+
+//code here
+
+import java.util.*;
+public class Q2 {
+
+	public static void main(String[] args) {
+		LinkedList<String> ll = new LinkedList<String>();
+		ll.add("R");
+		ll.add("M");
+		ll.add("T");
+		ll.add(1,"P");
+		System.out.println("Before sorting "+ll);
+		Collections.sort(ll);
+        System.out.println("After sorting "+ll);
+	}
+
+}
+
