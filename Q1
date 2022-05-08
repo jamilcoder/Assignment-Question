@@ -1,0 +1,38 @@
+Write a program to create a student class having member for name, age, roll number, create a linked list of student object and display it.
+
+//code here
+
+import java.util.LinkedList;
+import java.util.Scanner;
+class Student{
+   
+	static String name;
+	static int roll;
+    static int age;
+	
+  static Scanner sc = new Scanner(System.in);
+   static void input() {
+     System.out.println("Input the values");
+	 name = sc.nextLine();
+	 roll = sc.nextInt();
+	 age = sc.nextInt();
+	}
+	static void display() {
+	System.out.println("Name is "+ name +" roll no is "+roll+ " age is "+age);	
+		
+		
+	}
+}
+public class Q1 {
+
+	public static void main(String[] args) {
+     Student ss = new Student();
+     ss.input();
+     LinkedList<Student> li = new LinkedList<Student>();
+     li.add(ss);
+     for(int i = 0;i<li.size();i++) {
+    	 li.get(i).display();
+     }
+	}
+
+}
