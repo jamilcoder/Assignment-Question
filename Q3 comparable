@@ -1,0 +1,33 @@
+Write a program to create a student class having member for name, age , roll number , create a linked list of student object and sort this list in ascending order 
+according to roll number.
+
+// code here 
+
+import java . util .*;
+class Student implements Comparable < Student >{
+   int rollno ;
+   String name ;
+   int age;
+  
+   Student ( int rollno , String name , int age){
+     this.rollno = rollno ;
+     this.name = name ;
+     this.age=age;
+}
+  public int compareTo ( Student s){
+      
+	  return Integer . compare (rollno ,s. rollno );
+}
+ public static void main ( String args []){
+  
+	 ArrayList < Student > al= new ArrayList < Student >();
+     al.add( new Student (2 ," Jamil " ,23));
+     al.add( new Student (44 ,"Hero " ,27));
+     al.add( new Student (23 ," Zero " ,21));
+     Collections . sort (al);
+     for (Student st:al){
+     System .out. println (st. rollno +" "+st. name +" "+st.age);
+  }
+ }
+}
+
