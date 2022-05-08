@@ -1,0 +1,32 @@
+Write a java program to create a dictonary using linked list.
+
+//code here 
+
+import java.util.*;
+public class LinkedListq1{
+	public static void main (String[] args) {
+		Scanner sc= new Scanner(System.in);
+		int i,j;
+		List dict[]= new LinkedList[26];
+		System.out.println("Enter total no. of words");
+		int n= sc.nextInt();
+		String str[]= new String[n];
+		System.out.println("Enter"+n+" no of words");
+        for (i=0;i<str.length;i++) {
+        	str [i]=sc.next();}
+		
+		for (i=0;i<26;i++) {
+        	dict[i]=new LinkedList<String>();
+        	}
+		for (i=0;i<str.length;i++) {
+	        	String word= str[i];
+	        	char ch= word.charAt(0);
+	        	Character.toLowerCase(ch);
+	        	dict[ch-97].add(word);
+	        	}
+		for (i=0;i<26;i++) {
+			for(j=0;j<dict[i].size();j++)
+				System.out.println(dict[i].get(j)+"-->");
+			System.out.println();
+        
+	}}}
