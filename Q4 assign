@@ -1,0 +1,25 @@
+public class Q4i{
+ public static void main(String args[]) {
+	 int arr[] = {10,11,12,45,66};
+	 System.out.println("Element is at "+BinarySearch(arr,5,12));
+	 
+ }
+	
+public static int BinarySearch(int arr[], int size, int value) {
+  int mid;
+  int low = 0;
+  int high = size - 1;
+
+ while (low <= high) {
+   
+	 mid = low + (high - low) / 2; // To avoid the overflow
+
+if (arr[mid] == value) {return mid;
+}
+else {
+ if (arr[mid] < value) {
+  low = mid + 1;
+} else {
+high = mid - 1;
+}}}return -1;
+}}
