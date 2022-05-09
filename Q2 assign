@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Question2 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a Decimal Number");
+		int decimalNum = sc.nextInt();
+		
+		String binaryRep ="";
+		
+		
+		int temp = decimalNum;
+		int rem;
+		
+		while(temp!=0) {
+			rem = temp%2;
+			binaryRep += rem;
+			temp = temp/2;
+		}
+		StringBuilder binaryNumber=new StringBuilder(binaryRep);
+
+		
+		
+		System.out.println("Binary number: " + binaryNumber.reverse());
+		
+	}
+}
